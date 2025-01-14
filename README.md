@@ -119,7 +119,7 @@ VOYAGE is a comprehensive university application portal designed to simplify the
 ---
 
 ## Contributors
-- **Your Name** - Shubhang Yadav Sandaveni
+- Shubhang Yadav Sandaveni
 
  
 
