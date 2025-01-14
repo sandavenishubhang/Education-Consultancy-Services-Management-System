@@ -91,6 +91,24 @@ VOYAGE is a comprehensive university application portal designed to simplify the
 
 ---
 
+### MongoDB
+- **Top 3 universities by applications:**
+  ```javascript
+  db.universities.aggregate([
+    { $group: { _id: "$universityID", totalApplications: { $sum: 1 } } },
+    { $sort: { totalApplications: -1 } },
+    { $limit: 3 }
+  ]);
+- **Most Popular Country:**
+   ```javascript
+   db.applications.aggregate([
+  { $group: { _id: "$country", totalApplications: { $sum: 1 } } },
+  { $sort: { totalApplications: -1 } },
+  { $limit: 1 }
+  ]);
+
+
+
 ## Future Improvements
 - Integration with third-party services for application tracking.
 - AI-driven university recommendations.
